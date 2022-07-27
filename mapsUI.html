@@ -1,0 +1,45 @@
+[1:07 AM] Vasamsetty, Gangadhar
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>Directions Service</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- jsFiddle will insert css and js -->
+  </head>
+  <body>
+    <div id="floating-panel">
+      <b>Start: </b>
+      <select id="start">
+       <option value="Kukatpally, India">Kukatpally</option>
+       <option value="Hitech-city, India">HiTech City</option>
+      </select>
+      <b>End: </b>
+      <select id="end">
+          <option value="Kukatpally, India">Kukatpally</option>
+           <option value="Pragathi Nagar,Kukatpally, India">Pragathi Nagar</option>
+      </select>
+    </div>
+    <div id="map"></div>
+    <br>
+<input id="btn1" type="button" value="route1" onclick="directionsRenderer.setRouteIndex(0);" />
+<input id="btn2" type="button" value="route2" onclick="directionsRenderer.setRouteIndex(1);" />
+<input id="btn3" type="button" value="route3" onclick="directionsRenderer.setRouteIndex(2);" />
+<label id="directions-panel"></label>
+    <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
+
